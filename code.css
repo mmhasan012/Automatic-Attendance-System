@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: #007bff;
+    background-color: #0044cc;
     padding: 1rem 0;
     color: #fff;
 }
@@ -64,7 +64,7 @@ h3 {
 }
 
 button {
-    background-color: #007bff;
+    background-color: #28a745;
     border: none;
     color: #fff;
     padding: 0.75rem 1.5rem;
@@ -76,7 +76,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #218838;
 }
 
 button.quit {
@@ -88,8 +88,8 @@ button.quit:hover {
 }
 
 .clear-button {
-    background-color: #dc3545;
-    color: #fff;
+    background-color: #ffc107;
+    color: #333;
     padding: 0.5rem;
     font-size: 0.8rem;
     border: none;
@@ -99,7 +99,7 @@ button.quit:hover {
 }
 
 .clear-button:hover {
-    background-color: #c82333;
+    background-color: #e0a800;
 }
 
 form {
@@ -154,11 +154,9 @@ tbody tr {
 }
 
 .take-images, .save-profile {
-    background-color: #343a40;
+    background-color: #17a2b8;
 }
 
 .take-images:hover, .save-profile:hover {
-    background-color: #23272b;
+    background-color: #138496;
 }
-
-
