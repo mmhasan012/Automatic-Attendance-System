@@ -29,4 +29,26 @@ class Attendance(db.Model):
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
     status = db.Column(db.String(20), default='present')
 
+# face_recognition_service.py
+import cv2
+import face_recognition
+import numpy as np
+from models import Student, Attendance, db
+
+class FaceRecognitionService:
+    def __init__(self):
+        self.face_cascade = cv2.CascadeClassifier(
+            cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
+        )
+        self.known_face_encodings = []
+        self.known_face_ids = []
+        self.load_known_faces()
+
+    def load_known_faces(self):
+        students = Student.query.all()
+        for student in students:
+            if student.face_encoding is not None:
+                self.known_face_encodings.append(student.face_encoding)
+                self.known_face_ids.append(student.id)
+
 
